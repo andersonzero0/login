@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/05378ddbee.js" crossorigin="anonymous"></script>
+
+    <title>Login</title>
+
+</head>
+<body>
+    
+    <div class="conteiner_img">
+        <img src="https://picsum.photos/1080?grayscale" alt="">
+    </div>
+
+    <div class="conteiner_login">
+
+        <h1 class="legendLogin">Login</h1>
+
+        <form class="form">
+
+            <div class="box_input">
+                <i class="fa-solid fa-user icons_form"></i>
+                <input class="input_form" type="text" required maxlength="15" size="15" placeholder="Username">
+                <button type="button" class="btn_viewPassword false"><i class="fa-regular fa-eye iconViewPassword"></i></button>
+            </div>
+
+            <div class="box_input">
+                <i class="fa-solid fa-key icons_form"></i>
+                <input class="input_form" id="input_password" type="password" required maxlength="15" size="15" placeholder="Password">
+                <button type="button" onclick="viewPassword()" class="btn_viewPassword"><i class="fa-regular fa-eye iconViewPassword iconEye"></i></button>
+            </div>
+
+            <div>
+                <input class="btn_submit" type="button" value="Sign in">
+            </div>
+
+            <div>
+                <p class="linkSignUp">Don't have an account? <a href="">Sign up now.</a></p>
+            </div>
+
+        </form>
+
+    </div>
+
+</body>
+</html>
+
+<script>
+    const input_password = document.getElementById("input_password");
+    const iconViewPassword = document.querySelector(".iconEye");
+
+    function viewPassword() {
+        if(input_password.getAttribute("type") == 'password') {
+            input_password.setAttribute("type", "text");
+        }else {
+            input_password.setAttribute("type", "password");
+        }
+    }
+</script>
