@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
     <script src="https://kit.fontawesome.com/05378ddbee.js" crossorigin="anonymous"></script>
 
     <title>Login</title>
@@ -19,38 +20,44 @@
 
     <div class="conteiner_login">
 
-        <h1 class="legendLogin">Login</h1>
+        <div>
+            <h1 class="legendLogin">Login</h1>
+            <form class="form">
+                <div class="box_input">
+                    <i class="fa-solid fa-user icons_form"></i>
+                    <input class="input_form" type="text" required maxlength="15" size="15" placeholder="Username">
+                    <button type="button" class="btn_viewPassword false"><i class="fa-regular fa-eye iconViewPassword"></i></button>
+                </div>
 
-        <form class="form">
+                <div class="box_input">
+                    <i class="fa-solid fa-key icons_form"></i>
+                    <input class="input_form" id="input_password" type="password" required maxlength="15" size="15" placeholder="Password">
+                    <button type="button" onclick="viewPassword()" class="btn_viewPassword"><i class="fa-regular fa-eye iconViewPassword iconEye"></i></button>
+                </div>
 
-            <div class="box_input">
-                <i class="fa-solid fa-user icons_form"></i>
-                <input class="input_form" type="text" required maxlength="15" size="15" placeholder="Username">
-                <button type="button" class="btn_viewPassword false"><i class="fa-regular fa-eye iconViewPassword"></i></button>
-            </div>
+                <div class="box_submit">
+                    <input class="btn_submit" type="button" value="Sign in">
+                </div>
 
-            <div class="box_input">
-                <i class="fa-solid fa-key icons_form"></i>
-                <input class="input_form" id="input_password" type="password" required maxlength="15" size="15" placeholder="Password">
-                <button type="button" onclick="viewPassword()" class="btn_viewPassword"><i class="fa-regular fa-eye iconViewPassword iconEye"></i></button>
-            </div>
-
-            <div>
-                <input class="btn_submit" type="button" value="Sign in">
-            </div>
-
-            <div>
-                <p class="linkSignUp">Don't have an account? <a href="">Sign up now.</a></p>
-            </div>
-
-        </form>
+                <div>
+                    <p class="linkSignUp">Don't have an account? <a href="#">Sign up now.</a></p>
+                </div>
+            </form>
+        </div>
 
     </div>
+
+    <footer>
+        <p>&copy;2023 andersonviana</p>
+        <a href="#"><i class="fa-brands fa-github-alt"></i></a>
+        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+    </footer>
 
 </body>
 </html>
 
 <script>
+
     const input_password = document.getElementById("input_password");
     const iconViewPassword = document.querySelector(".iconEye");
 
@@ -61,4 +68,5 @@
             input_password.setAttribute("type", "password");
         }
     }
+
 </script>

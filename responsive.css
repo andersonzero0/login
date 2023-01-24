@@ -1,0 +1,54 @@
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    body {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 'a' 'b';
+    }
+
+    .conteiner_img {
+        grid-area: b;
+    }
+    
+    .conteiner_img > img {
+        content: url('https://picsum.photos/768/512?grayscale');
+        width: 100vw;
+        height: 50vh;
+        min-height: auto;
+    }
+
+    .conteiner_login {
+        justify-content: space-evenly;
+    }
+
+    .form {
+        margin-bottom: 5px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    body {
+        display: block;
+        background-image: url('https://picsum.photos/1024/768?grayscale');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        backdrop-filter: blur(2px);
+    }
+
+    .conteiner_img {
+        display: none;
+    }
+
+    .conteiner_login {
+        padding: 0 10px;
+        background: transparent;
+    }
+
+    .form {
+        border: 3px solid var(--color0);
+    }
+
+    .linkSignUp {
+        font-size: 0.7em;
+    }
+}
